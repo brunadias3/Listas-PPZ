@@ -1,0 +1,96 @@
+# Faça um Programa que peça os três lados de um triângulo.
+# O programa deverá informar se os valores podem ser 
+# um triângulo. Indique, caso os lados formem um triângulo,
+# se o mesmo é: equilátero, isósceles ou escaleno.
+t1 = int(input('Lado 1: '))
+t2 = int(input('Lado 2: '))
+t3 = int(input('Lado 3: '))
+if t1 == t2 and t2 == t3:
+	print('Triângulo Equilátero')
+elif t1==t2 and t2!=t3 or t1==t3 and t3!=t2 or t2==t3 and t1!=t2:
+	print('Triângulo Isósceles')
+else:
+	print('Triângulo Escaleno')
+
+
+# Determine se um ano é bissexto.
+ano = int(input('Digite o ano: '))
+if (ano % 4 == 0 and ano%100!=0) or (ano%400 == 0):
+	print('Bissexto')
+else:
+	print('Não é bissexto')
+
+
+# R$ 4,00 por quilo excedente
+peso = int(input('Qual o peso? '))
+if peso > 50:
+	excesso = (peso - 50) * 4
+	print('Você tem que pagar R$',excesso, 'de multa')
+else:
+	excesso = 0
+	multa = 0
+	print('Sem multas')
+
+#Faça um Programa que leia três números e mostre o maior 
+# deles.
+n1 = int(input('Digite um número: '))
+n2 = int(input('Digite outro número: '))
+n3 = int(input('Mais um número: '))
+if n1>n2 and n1>n3:
+	print('O maior número digitado foi',n1)
+elif n2>n1 and n2>n3:
+	print('O maior número digitado foi', n2)
+elif n3>n1 and n3>n2:
+	print('O maior número digitado foi',n3)
+else:
+	print('O maior número digitado foi',n1)
+
+#Faça um Programa que leia três números e mostre o maior 
+# e o menor deles.
+n1 = int(input('Digite um número: '))
+n2 = int(input('Digite outro número: '))
+n3 = int(input('Mais um número: '))
+if n1>n2 and n1>n3:
+	print('O maior número digitado foi',n1)
+elif n2>n1 and n2>n3:
+	print('O maior número digitado foi', n2)
+elif n3>n1 and n3>n2:
+	print('O maior número digitado foi',n3)
+else:
+	print('O maior número digitado foi',n1)
+if n1<n2 and n1<n3:
+	print('O menor número digitado foi',n1)
+elif n2<n1 and n2<n3:
+	print('O menor número digitado foi', n2)
+elif n3<n1 and n3<n2:
+	print('O menor número digitado foi',n3)
+else:
+	print('O menor número digitado foi',n1)
+
+# 11% para o Imposto de Renda
+# 8% para o INSS e 5% para o sindicato
+# Salário Bruto - Descontos = Salário Líquido
+din_horas = float(input('Quanto você ganha por hora? '))
+num_horas_trab = int(input('Quantas horas você trabalha por mês? '))
+salario_bruto = din_horas * num_horas_trab
+print('Seu salário bruto é de R$',salario_bruto)
+imposto_renda = (salario_bruto * 11) / 100
+print('Você pagou R$',imposto_renda, 'de imposto de renda')
+inss = (salario_bruto * 8) / 100
+print('Você pagou R$',inss,'de INSS')
+sind = (salario_bruto * 5) / 100
+print('Você pagou R$',sind,'para o sindicado')
+salario_liquido = salario_bruto - imposto_renda - inss - sind
+print('Seu salário líquido é de R$',salario_liquido)
+
+
+# 1 Litro para 3m
+# 18 L = R$ 80
+# uma lata = 54m
+area = int(input('Quantos metros? '))
+if area % 54 == 0:
+latas = area / 54
+print ('Irá precisar de',latas,'latas')
+else:
+latas = int((area / 54) + 1)
+print('Irá precisar de',latas,'latas')

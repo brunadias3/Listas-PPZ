@@ -1,0 +1,63 @@
+# Faça um programa que peça uma nota, entre zero e dez. 
+# Mostre uma mensagem caso o valor seja inválido e 
+# continue pedindo até que o usuário informe um valor válido
+num = int(input('Digite um número entre zero e dez: '))
+while num < 0 or num > 10:
+	print('Número inválido')
+	num = int(input('Digite um número entre zero e dez: '))
+else:
+	print('Número válido')
+
+
+# Faça um programa que leia um nome de usuário e a sua 
+# senha e não aceite a senha igual ao nome do usuário, 
+# mostrando uma mensagem de erro e voltando a pedir as 
+# informações.
+user = input('usuário: ')
+senha = input('senha: ')
+while user == senha:
+	print('Erro. Digite outra senha.')
+	user = input('usuário: ')
+	senha = input('senha: ')
+else:
+	print('Ok')
+
+
+# País A = 80000 e 3% de crescimento
+# País B = 200000 e 1.5% de crescimento
+# escreva o número de anos necessários para que a 
+# população do país A ultrapasse ou iguale a população 
+# do país B, mantidas as taxas de crescimento
+A = 80000
+B = 200000
+anos = 0
+while A <= B:
+	A = A + A * 0.03
+	B = B + B * 0.015
+	anos = anos + 1
+print(anos, 'anos')
+
+
+# Sequência de Fibonacci de um número inteiro lido.
+num = int(input('Digite um número: '))
+a1, a2 = 1, 1
+cont = 1
+while cont <= num-2:
+	a1, a2 = a2, a1+a2
+	cont = cont + 1
+print(a2)
+
+
+# Dados dois números inteiros positivos, determinar o 
+# máximo divisor comum entre eles usando o algoritmo de 
+# Euclides. 
+num1 = int(input('Número: '))
+num2 = int(input('Número: '))
+anterior  = num1
+atual = num2
+resto = atual % anterior
+while resto != 0:
+	resto = anterior % atual
+	anterior = atual
+	atual = resto
+print("MDC (%d,%d) = %d" %(num1,num2,anterior))

@@ -1,0 +1,110 @@
+# Faça um programa que peça dois números inteiros
+# e imprima a soma desses dois números
+n1 = int(input('Digite um numero: '))
+n2 = int(input('Digite outro número: '))
+print (n1 + n2)
+
+
+
+# Escreva um programa que leia um valor em metros 
+# e o exiba convertido em milímetros
+n1 = int(input('Quantos metros?'))
+n2 = (n1 * 1000)
+print (n2, 'milimetros')
+
+
+
+# Escreva um programa que leia a quantidade de dias,
+# horas, minutos e segundos do usuário. Calcule
+# o total em segundos
+n1 = int(input('Dias: '))
+n2 = int(input('Horas: '))
+n3 = int(input('Minutos: '))
+n4 = int(input('Segundos: '))
+n1 = n1 * 86400
+n2 = n2 * 3600
+n3 = n3 * 60
+total = n1 + n2 + n3 + n4
+print (total)
+
+
+
+# Faça um programa que calcule o aumento de um salário. 
+# Ele deve solicitar o valor do salário e a porcentagem do
+# aumento. Exiba o valor do aumento e do novo salário.
+salario = float(input('Salario: '))
+porcentagem = float(input('Aumento %: '))
+aumento = salario * porcentagem / 100
+print ('Seu aumento foi de: R$ ',aumento)
+total = salario + aumento
+print ('Seu novo salario é: R$ ', total)
+
+
+
+# Solicite o preço de uma mercadoria e o percentual de 
+# desconto. Exiba o valor do desconto e o preço a pagar.
+preco = float(input('Preco: '))
+porcentagem = float(input('Desconto %: '))
+desconto = preco * porcentagem / 100
+print ('Seu desconto foi de: R$ ',desconto)
+total = preco - desconto
+print ('O novo preco é de: R$ ', total)
+
+
+
+# Calcule o tempo de uma viagem de carro. 
+# Pergunte a distância a percorrer e a velocidade média
+# esperada para a viagem.
+distancia = float(input('Qual a distância em km?: '))
+vm = float(input('Qual a velocidade média?(km/h): '))
+tempo = distancia / vm
+print (tempo)
+
+
+
+# Converta uma temperatura digitada em Celsius para 
+# Fahrenheit. F = 9*C/5 + 32
+c = float(input('Temperatura em Celsius: '))
+f = 9 * c / 5 + 32
+print('A temperatura em Fahrenheit é de: ', f)
+
+
+
+# Faça agora o contrário, de Fahrenheit para Celsius.
+f = float(input('Temperatura em Fahrenheit: '))
+c = (5 * f - 160) / 9
+print('A temperatura em Celsius é de: ', c)
+
+
+
+# Escreva um programa que pergunte a quantidade de km 
+# percorridos por um carro alugado pelo usuário, assim 
+# como a quantidade de dias pelos quais o carro foi 
+# alugado. Calcule o preço a pagar, sabendo que o carro 
+# custa R$ 60,00 por dia e R$ 0,15 por km rodado
+km = float (input('Quantos km foram percorridos?: '))
+dias = int (input('Quantos dias?: '))
+preco = (km * 0.15) + (dias * 60)
+print ('O preço a pagar é de: R$ ', preco)
+
+
+
+# Escreva um programa para calcular a redução do tempo 
+# de vida de um fumante. Pergunte a quantidade de cigarros
+# fumados por dia e quantos anos ele já fumou. Considere 
+# que um fumante perde 10 minutos de vida a cada cigarro, 
+# calcule quantos dias de vida um fumante perderá. Exiba o
+# total de dias.
+# 1 dia = 1440 minutos = 144 cigarros 
+cigarro = int (input('Quantos cigarros por dia?: '))
+anos = int (input('Por quantos anos?: '))
+total_cigarros = anos * 365 * cigarro
+dias = total_cigarros / 144
+print (f'Você perdeu{dias: .1f} dias')
+
+
+
+# Sabendo que str( ) converte valores numéricos para 
+# string, calcule quantos dígitos há em 2 elevado
+# a um milhão.
+print((len(str(2 ** 1000000))), 'algarismos')
