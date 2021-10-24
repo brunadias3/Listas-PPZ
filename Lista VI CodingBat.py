@@ -1,8 +1,16 @@
 #!/usr/bin/python -tt
 # Exercícios by Nick Parlante (CodingBat)
 
-
-
+# A. dormir
+# dia_semana é True para dias na semana
+# feriado é True nos feriados
+# você pode ficar dormindo quando é feriado ou não é dia semana
+# retorne True ou False conforme você vá dormir ou não
+def dormir(dia_semana, feriado):
+  if dia_semana == False and feriado == True:
+    return True
+  else:
+    return False
 
 # B. alunos_problema
 # temos dois alunos a e b
